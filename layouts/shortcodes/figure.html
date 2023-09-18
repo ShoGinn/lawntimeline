@@ -1,0 +1,6 @@
+<div class="gallery-item">
+    {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+    <a href="{{ $image.RelPermalink }}" data-lightbox="gallery" data-title="{{ with .Get "alt" }}{{ . }}{{ else }}Image{{ end }}">
+        <img src="{{ $image.RelPermalink }}" alt="{{ with .Get "alt" }}{{ . }}{{ else }}Image{{ end }}">
+    </a>
+</div>
