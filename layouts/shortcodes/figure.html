@@ -6,7 +6,7 @@
   {{- $img_sm := $img_md.Fit "400x400 webp r270" -}}
   {{- $width := (.Get "width") | default $img_md.Width -}}
   {{- $height := (.Get "height") | default $img_md.Height -}}
-  <a href="{{ $img.RelPermalink }}" data-lightbox="gallery" data-title="{{ $alt }}">
+  <a href="{{ $img.RelPermalink }}" data-fancybox="gallery" data-caption="{{ .Page.Title }} -- {{ $alt }}">
     <img
       alt="{{ $alt }}"
       srcset="{{ $img_sm.RelPermalink }} 400w, {{ $img_md.RelPermalink }} 760w, {{ $img_lg.RelPermalink }} 1200w"

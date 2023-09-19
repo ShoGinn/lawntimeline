@@ -1,0 +1,10 @@
+[js.fancybox]
+  version = "5.0.22"
+  sri = "sha512-RxjQ+g3zcpYAPtljIRtQGlRk7nQhdjJDFTJ3KbfDq1pwJG8cXO7JxWJb7oPXbQOTlsrct8P3iWyE2TkvUVaIAg=="
+  url = "https://cdn.jsdelivr.net/npm/@fancyapps/ui@%s/dist/fancybox/fancybox.umd.min.js"
+
+[css.fancybox]
+  version = "5.0.22"
+  sri = "sha512-JqMVkGpZZGuQO8IQESETpzghsU+TUkuA/RQG3BbNs7XHOVzwPhtFJSJJViR4UXHmtkuUASraw5awqflArJOTQQ=="
+  url = "https://cdn.jsdelivr.net/npm/@fancyapps/ui@%s/dist/fancybox/fancybox.min.css"
+  
