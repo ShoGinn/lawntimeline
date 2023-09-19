@@ -1,0 +1,16 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+  {{ $style := $css.RelPermalink }}
+  <link rel="stylesheet" href="{{ $style }}" />
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Lightbox2 JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+
+  {{ $title := partial "functions/get_page_title" . }}
+  <title>{{ $title }}</title>
+</head>

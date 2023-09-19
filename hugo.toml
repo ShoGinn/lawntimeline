@@ -1,3 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://lawntimeline.vercel.app'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Lawn Progression Timeline'
+[params.footer]
+    text = 'Just a Simple Page -- Created By Scott Ginn'
