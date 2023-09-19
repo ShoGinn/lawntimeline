@@ -1,6 +1,19 @@
 <div class="gallery-item">
-    {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
-    <a href="{{ $image.RelPermalink }}" data-lightbox="gallery" data-title="{{ with .Get "alt" }}{{ . }}{{ else }}Image{{ end }}">
-        <img src="{{ $image.RelPermalink }}" alt="{{ with .Get "alt" }}{{ . }}{{ else }}Image{{ end }}">
-    </a>
+  {{- $alt := .Get "alt" | default ("Image" | plainify) -}}
+  {{- $img := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
+  {{- $img_lg := $img.Fit "1200x1200 webp r270" -}}
+  {{- $img_md := $img_lg.Fit "760x760 webp r270" -}}
+  {{- $img_sm := $img_md.Fit "400x400 webp r270" -}}
+  {{- $width := (.Get "width") | default $img_md.Width -}}
+  {{- $height := (.Get "height") | default $img_md.Height -}}
+  <a href="{{ $img.RelPermalink }}" data-lightbox="gallery" data-title="{{ $alt }}">
+    <img
+      alt="{{ $alt }}"
+      srcset="{{ $img_sm.RelPermalink }} 400w, {{ $img_md.RelPermalink }} 760w, {{ $img_lg.RelPermalink }} 1200w"
+      src="{{ $img_sm.RelPermalink }}"
+      width="{{ $width }}"
+      height="{{ $height }}"
+      loading="lazy"
+    />
+  </a>
 </div>

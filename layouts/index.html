@@ -1,17 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
     <!-- Lightbox2 CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Lightbox2 JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
     <title>Lawn Progression Timeline</title>
   </head>
@@ -22,11 +19,11 @@
 
     <section class="timeline">
       {{ range .Pages }}
-      <div class="week">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Date.Format "January 2, 2006" }}</p>
-        {{ .Content }}
-      </div>
+        <div class="week">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Date.Format "January 2, 2006" }}</p>
+          {{ .Content }}
+        </div>
       {{ end }}
     </section>
 
