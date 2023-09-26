@@ -4,6 +4,21 @@
       <div class="week">
         <h2>{{ .Title }}</h2>
         <p>{{ .Date.Format "January 2, 2006" }}</p>
+        {{- with .Params -}}
+          <div class="notes">
+            <h3>Notes:</h3>
+            {{ .notes }}
+            {{- with .changes -}}
+              <h3>Changes/Updates:</h3>
+              {{ . }}
+            {{- end -}}
+            {{- with .observations -}}
+              <h3>Personal Observations:</h3>
+              {{ . }}
+            {{- end -}}
+
+          </div>
+        {{- end -}}
         {{- .Content -}}
       </div>
     {{- end -}}
