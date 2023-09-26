@@ -2,6 +2,10 @@
 title = 'Week 1'
 date = 2023-08-28T17:01:34-04:00
 draft = false
+notes = "Mowed this a couple days ago"
+changes =  "This is right before first treatment"
+observations = "The lawn is hurting with weeds and bugs destroying it and the heat is not helping"
+
 +++
 
 {{< gallery >}}

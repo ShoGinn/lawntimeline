@@ -2,6 +2,7 @@
 title = 'Week 4'
 date = 2023-09-18T17:01:34-04:00
 draft = false
+notes = "Mowed right before these images"
 +++
 
 {{< gallery >}}
