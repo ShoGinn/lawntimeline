@@ -2,11 +2,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  {{ $cssData := site.Data.assets.css }}
-  {{ printf "<link rel=\"stylesheet\" href=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\" media=\"print\" onload=\"this.media='all'\">" (printf $cssData.fancybox.url $cssData.fancybox.version) $cssData.fancybox.sri | safeHTML }}
-  {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
-  {{ $style := $css.RelPermalink }}
-  <link rel="stylesheet" href="{{ $style }}" />
   {{ $title := partial "functions/get_page_title" . }}
   <title>{{ $title }}</title>
+
+  {{ $cssData := site.Data.assets.css }}
+  {{ printf "<link rel=\"stylesheet\" href=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\" media=\"print\" onload=\"this.media='all'\">" (printf $cssData.fancybox.url $cssData.fancybox.version) $cssData.fancybox.sri | safeHTML }}
+  {{ hugo.Generator }}
+
+  {{ partialCached "components/headers/css.html" . }}
 </head>

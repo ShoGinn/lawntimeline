@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    @apply bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white text-center py-8;
+}
+
+.timeline {
+    @apply p-4;
+}
+
+.week {
+    @apply border border-gray-300 mb-4 p-4;
+}
+
+.week img {
+    @apply w-1/4 mx-1 align-top;
+}
+
+footer {
+    @apply bg-gradient-to-t from-gray-900 to-gray-600 bg-gradient-to-r text-white text-center py-4;
+}
+
+.gallery {
+    @apply flex flex-wrap gap-4;
+}
+
+.gallery-item {
+    @apply flex-1 relative overflow-hidden;
+    width: calc(25% - 1rem);
+}
+
+.gallery-item img {
+    @apply w-full h-auto transition-transform duration-300;
+}
+
+.gallery-item:hover img {
+    @apply transform scale-110;
+}
+
+.notes {
+    @apply mt-4 p-4 bg-gray-100 border border-gray-300 rounded;
+}
