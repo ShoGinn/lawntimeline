@@ -3,7 +3,7 @@ title = 'Week 6'
 date = 2023-10-02
 draft = false
 notes = "Mowed on Saturday"
-changes = "No Changes in activity or actions"
+changes = "Ira The TruGreen specialist came out on 9/27/2023 and did fertilizer and weed control."
 observations = "TruGreen has recommended that we add topsoil and let the grass create a base, this is the end of the growing season, when February, March comes along we need to add plugs to the lawn."
 
 +++
